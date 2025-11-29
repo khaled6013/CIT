@@ -1,5 +1,6 @@
 import { IoChevronDown } from "react-icons/io5";
 import { MdLanguage } from "react-icons/md"; 
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -8,21 +9,20 @@ const Navbar = () => {
         <div className="lg:w-10/12 w-11/12 mx-auto ">
           <div className="flex items-center justify-between">
             <div className="">
-                <a href="#" className="text-white font-bold text-[28px]">LOGO</a>
+                <Link to='/' className="text-white font-bold text-[28px]">LOGO</Link>
             </div>
             <div className="">
                 <ul className="flex items-center gap-7">
                     <li>
-                        <a href="#" className="text-white font-medium text-[18px]">Home</a>
+                        <Link to='/' className="text-white font-medium text-[18px]">Home</Link>
                     </li>
                     <li>
-                        <a href="#" className="text-white font-medium text-[18px]">About</a>
+                        <Link to='/about' className="text-white font-medium text-[18px]">About</Link>
                     </li>
-                    
                     <li className="relative group">
-                        <a href="#" className="text-white font-medium text-[18px] flex items-center gap-1 cursor-pointer">
+                        <Link to='/courses' className="text-white font-medium text-[18px] flex items-center gap-1 cursor-pointer">
                             courses <IoChevronDown />
-                        </a>
+                        </Link>
                         <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <ul className="bg-white w-[200px] shadow-lg rounded-md overflow-hidden">
                                 <li>
@@ -37,12 +37,11 @@ const Navbar = () => {
                             </ul>
                         </div>
                     </li>
-
-                    <li>
-                        <a href="#" className="text-white font-medium text-[18px]">FAQ</a>
+                     <li>
+                        <Link to='/faq' className="text-white font-medium text-[18px]">FAQ</Link>
                     </li>
-                    <li>
-                        <a href="#" className="text-white font-medium text-[18px]">Contact</a>
+                     <li>
+                        <Link to='/contact' className="text-white font-medium text-[18px]">Contact</Link>
                     </li>
                 </ul>
             </div>
