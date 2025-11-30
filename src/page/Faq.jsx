@@ -1,8 +1,11 @@
 import React from 'react'
+import FaqPart from '../components/FaqPart'
 
 const Faq = () => {
   return (
-    <div>Faq</div>
+    <>
+     <FaqPart></FaqPart>
+    </>
   )
 }
 
