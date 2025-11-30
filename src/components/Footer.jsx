@@ -32,7 +32,7 @@ const Footer = () => {
 
     return (
         <footer className="bg-[#0F172A] w-full pt-16 pb-6">
-            <div className="lg:w-10/12 w-11/12 mx-auto">
+            <div className="lg:w-9/12 w-11/12 mx-auto">
                 
                 {/* Section Title */}
                 <div className="flex flex-col items-center justify-center mb-10">

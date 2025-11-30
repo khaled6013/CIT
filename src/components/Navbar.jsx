@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <>
       <div className="bg-[#8c0443] w-full lg:py-4 py-3">
-        <div className="lg:w-10/12 w-11/12 mx-auto ">
+        <div className="lg:w-9/12 w-11/12 mx-auto ">
           <div className="flex items-center justify-between">
             <div className="">
                 <Link to='/' className="text-white font-bold text-[28px]">LOGO</Link>

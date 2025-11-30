@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <>
             <div className='bg-[#0F172A] w-full lg:py-3 py-3'>
-                <div className="lg:w-10/12 w-11/12 mx-auto ">
+                <div className="lg:w-9/12 w-11/12 mx-auto ">
                     <div className="lg:flex justify-between items-center">
                         <div className="lg:flex items-center  gap-2 text-white">
                             <div className="flex items-center justify-center gap-2 border-r-2 lg:pr-4 ">
