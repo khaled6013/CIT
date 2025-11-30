@@ -55,7 +55,7 @@ const AboutPart = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                             {features.map((item, index) => (
                                 <div key={index} className="flex items-center gap-3">
-                                    <FaCheckCircle className="text-[#880b48] text-xl flex-shrink-0" />
+                                    <FaCheckCircle className="text-[#880b48] text-xl shrink-0" />
                                     <span className="text-gray-700 font-medium">{item}</span>
                                 </div>
                             ))}

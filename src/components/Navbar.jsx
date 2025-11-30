@@ -1,8 +1,15 @@
+import React, { useState } from "react"; 
 import { IoChevronDown } from "react-icons/io5";
 import { MdLanguage } from "react-icons/md"; 
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [currentLang, setCurrentLang] = useState("English");
+
+  const handleLangChange = (lang) => {
+    setCurrentLang(lang);
+  };
+
   return (
     <>
       <div className="bg-[#8c0443] w-full lg:py-4 py-3">
@@ -26,13 +33,13 @@ const Navbar = () => {
                         <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <ul className="bg-white w-[200px] shadow-lg rounded-md overflow-hidden">
                                 <li>
-                                    <a href="#" className="block px-4 py-3 text-black hover:bg-gray-100 text-[16px] border-b">Web Design</a>
+                                    <Link to='/web-design' className="block px-4 py-3 text-black hover:bg-gray-100 text-[16px] border-b">Web Design</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="block px-4 py-3 text-black hover:bg-gray-100 text-[16px] border-b">Graphic Design</a>
+                                    <Link to='/graphic-design' className="block px-4 py-3 text-black hover:bg-gray-100 text-[16px] border-b">Graphic Design</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="block px-4 py-3 text-black hover:bg-gray-100 text-[16px]">Digital Marketing</a>
+                                    <Link to='/digital-marketing' className="block px-4 py-3 text-black hover:bg-gray-100 text-[16px]">Digital Marketing</Link>
                                 </li>
                             </ul>
                         </div>
@@ -47,18 +54,27 @@ const Navbar = () => {
             </div>
             
             <div className="relative group">
-                <button className='bg-[#0A2C3D] text-white font-poppins font-normal text-[14px] lg:py-3 py-2 px-4 cursor-pointer flex items-center gap-2 rounded-md'>
-                    <MdLanguage className="text-[18px]" />
-                    English 
+                <button className='bg-[#0A2C3D] text-white font-poppins font-normal text-[14px] lg:py-3 py-2 px-4 cursor-pointer flex items-center gap-2 rounded-md w-[120px] justify-between'>
+                    <div className="flex items-center gap-2">
+                        <MdLanguage className="text-[18px]" />
+                        {currentLang} 
+                    </div>
                     <IoChevronDown />
                 </button>
+                
                 <div className="absolute top-full right-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                     <ul className="bg-white w-[120px] shadow-lg rounded-md overflow-hidden text-black">
-                        <li className="hover:bg-gray-100 border-b cursor-pointer">
-                            <a href="#" className="block px-4 py-2 text-[14px]">English</a>
+                        <li 
+                            onClick={() => handleLangChange("English")}
+                            className={`hover:bg-gray-100 border-b cursor-pointer px-4 py-2 text-[14px] ${currentLang === 'English' ? 'bg-gray-50 font-bold text-[#8c0443]' : ''}`}
+                        >
+                            English
                         </li>
-                        <li className="hover:bg-gray-100 cursor-pointer">
-                            <a href="#" className="block px-4 py-2 text-[14px]">Bangla</a>
+                        <li 
+                            onClick={() => handleLangChange("Bangla")}
+                            className={`hover:bg-gray-100 cursor-pointer px-4 py-2 text-[14px] ${currentLang === 'Bangla' ? 'bg-gray-50 font-bold text-[#8c0443]' : ''}`}
+                        >
+                            Bangla
                         </li>
                     </ul>
                 </div>

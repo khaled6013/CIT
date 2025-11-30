@@ -37,7 +37,7 @@ const Choose = () => {
             <div className="w-11/12 lg:w-9/12 mx-auto">
                 <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                     <div className="lg:w-1/2 relative">
-                        <div className="absolute top-10 left-10 w-full h-full border-2 border-[#880b48] rounded-2xl -z-0 hidden lg:block"></div>
+                        <div className="absolute top-10 left-10 w-full h-full border-2 border-[#880b48] rounded-2xl z-0 hidden lg:block"></div>
                         <div className="relative z-10">
                             <img 
                                 src={img1} 
